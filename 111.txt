@@ -1,0 +1,15 @@
+
+export WIFI_SSID=shenke-5G
+export WIFI_PASSWORD=CQSK8888
+export OPENAI_API_KEY=bing
+
+
+set WIFI_SSID=shenke-5G
+set WIFI_PASSWORD=CQSK8888
+set OPENAI_API_KEY=bing
+
+idf.py build
+
+idf.py --preview set-target linux
+idf.py build
+idf.py monitor

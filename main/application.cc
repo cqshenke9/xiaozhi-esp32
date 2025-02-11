@@ -358,11 +358,11 @@ void Application::Start() {
     });
 
     // Check for new firmware version or get the MQTT broker address
-    xTaskCreate([](void* arg) {
-        Application* app = (Application*)arg;
-        app->CheckNewVersion();
-        vTaskDelete(NULL);
-    }, "check_new_version", 4096 * 2, this, 1, nullptr);
+    // xTaskCreate([](void* arg) {
+    //     Application* app = (Application*)arg;
+    //     app->CheckNewVersion();
+    //     vTaskDelete(NULL);
+    // }, "check_new_version", 4096 * 2, this, 1, nullptr);
 
 
 #if CONFIG_IDF_TARGET_ESP32S3
